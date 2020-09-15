@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    function random(val1,val2,val3){
+      let arr = [val1,val2,val3];
+       return arr[Math.floor(Math.random() * arr.length)]; 
+    }
+    function computerPlay() {
+    return random("Rock","Paper","Scissors");
+ }
+ function playRound(ps,cs){
+   ps = ps.toUpperCase();
+   cs = cs.toUpperCase();
+
+if (ps == "ROCK" && cs == "PAPER"){
+  alert("You lose!");
+  console.log("Computer won");
+}
+else if ( ps == "ROCK" && cs == "SCISSORS"){
+alert("You win!");
+console.log("Player won");
+}
+else if (ps == "PAPER" && cs == "SCISSORS"){
+  alert("You lose!");
+  console.log("Computer won");
+}
+else if (ps == "PAPER" && cs == "ROCK"){
+  alert("You win!");
+  console.log("Player won");
+}
+else if (ps == "SCISSORS" && cs == "ROCK"){
+  alert("You lose!");
+  console.log("Computer won");
+}
+else if (ps == "SCISSORS" && cs == "PAPER") {
+  alert("You win!");
+  console.log("Player won");
+}
+ }
+
+
+for (i=0; i<5; i++) {
+  const ps = window.prompt("what's your pick?");
+  const cs = computerPlay();
+  playRound(ps,cs);
+}
+
+  </script>
+</body>
+</html>
